@@ -1,4 +1,6 @@
-export type Food = {
+//Exports the movie data to the foodlist.tsx
+
+export type Movie = {
   movieID: number;
   category: string;
   title: string;

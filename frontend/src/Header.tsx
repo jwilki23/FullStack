@@ -1,5 +1,5 @@
 import logo from './JoelHiltonHeadshot.jpg';
-
+//A header that is exported to be used on main page.
 function Header(props: any) {
   return (
     <header className="row">

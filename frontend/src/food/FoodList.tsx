@@ -1,16 +1,17 @@
 import { useEffect, useState } from 'react';
-import { Food } from '../types/food';
+import { Movie } from '../types/food';
 
 function FoodList() {
-  const [foodData, setFoodData] = useState<Food[]>([]);
-
+  const [foodData, setMovieData] = useState<Movie[]>([]);
+  //Use effect makes it so that it doesn't constantly send request after request.
   useEffect(() => {
-    const fetchFood = async () => {
+    //This gets the data from the api
+    const fetchMovies = async () => {
       const rsp = await fetch('https://localhost:4000/movie');
       const temp = await rsp.json();
-      setFoodData(temp);
+      setMovieData(temp);
     };
-    fetchFood();
+    fetchMovies();
   }, []);
 
   return (
